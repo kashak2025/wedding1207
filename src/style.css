@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.aaa{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.aaa img{
+    width: 100%;
+  display: block;
+}
+.aaa::before{
+    content: '';
+  background-color: rgba(0, 0, 0, 0.650);
+  /* border-radius: 307px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
