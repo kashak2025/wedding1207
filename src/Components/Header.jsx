@@ -45,7 +45,7 @@ const Header = () => {
           <Box sx={{ display: 'flex'}}>
             <Box sx={{ mr: '20px' }}><SearchIcon sx={{'&:hover':{color:'#dd1a18'},transition:'0.5s', color: '#000' }} /></Box>
             <Box sx={{ mr: '20px' }}><FavoriteBorderIcon sx={{'&:hover':{color:'#dd1a18'},transition:'0.5s', color: '#000' }} /></Box>
-            <Box sx={{ mr: '20px' }}><a href="http://localhost:3000/Login"><PersonOutlineIcon sx={{'&:hover':{color:'#dd1a18'},transition:'0.5s', color: '#000' }} /></a></Box>
+            <Box sx={{ mr: '20px' }}><Link to="/login"><PersonOutlineIcon sx={{'&:hover':{color:'#dd1a18'},transition:'0.5s', color: '#000' }} /></Link></Box>
           </Box>
         </Container>
       </AppBar>
