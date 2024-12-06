@@ -20,10 +20,10 @@ const Login = () => {
             </Box>
             <Box sx={{mb: "40px",width: "270px",display: "flex",flexWrap: "wrap",justifyContent: "center",}}>
                 <Formik initialValues={{   firstName: "",   lastName: "",   email: "",}}
-                onSubmit={async (values) => {
-                await new Promise((r) => setTimeout(r, 500));
-                alert(JSON.stringify(values, null, 2));
-                }}>
+                onSubmit={ (values) => {
+                  
+                }}
+                >
                     <Form>
                       <Field as={TextField} sx={{ my: "10px", width:'100%' }} required label="UserName" name='username' variant="filled"  type="text"></Field>
                       <Field as={TextField} sx={{ my: "10px", width:'100%' }} required label="Email" name='Email' variant="filled"  type="email"></Field>
