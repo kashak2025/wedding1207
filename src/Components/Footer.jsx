@@ -115,7 +115,7 @@ const Footer = () => {
 
       <Container sx={{ textAlign: 'center', mt: 6 }}>
         <Typography variant="body2" color="textSecondary">
-          Copyright © 2024 | Designed and Developed by <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Kashak</a>, <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Keval</a>, <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Happy</a> and <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Harsh</a>
+          Copyright © 2024 | Designed and Developed by <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Kashak</a>, <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Keval</a> and <a href="#" style={{'&:hover':{color:'#dd1a18'},color:'#000', textDecoration:'none',}} >Happy</a>
         </Typography>
       </Container>
     </Box>
