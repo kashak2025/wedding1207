@@ -7,45 +7,46 @@ import Icon from "../Images/search.png";
 import { useHistory } from 'react-router-dom'
 
 const Signup = () => {
-    let history = useHistory()
-    const handleRedirectSignup = () =>{
-        history.push('/login')
-      }
+  let history = useHistory()
+  const handleRedirectSignup = () => {
+    history.push('/login')
+  }
   return (
     <Box sx={{ mb: "100px" }}>
-    <Container>
-        <Box sx={{display: "flex",alignItems: "center",justifyContent: "center",flexDirection: "column",position: "relative",top: "100px",}}>
-            <Box sx={{borderRadius:'10px', boxShadow:'9px 9px 15px -4px #3b3b3b', px:"20px",mb:'30px'}}>
-                <Box sx={{display: "flex",justifyContent: "center",fontSize: { lg: 45, md: 40, sm: 35, xs: 30 },textTransform: "uppercase",color: "#3b3b3b",fontFamily: '"Prosto One", system-ui',margin: { lg: "36px 0px 36px 0px", md: "10px", sm: "auto" },}}>
-                Sign in
-                </Box>
-                <Box sx={{mb: "40px",width: "270px",display: "flex",flexWrap: "wrap",justifyContent: "center",}}>
-                    <Formik initialValues={{   firstName: "",   lastName: "",   email: "",}}
-                    onSubmit={async (values) => {
-                    await new Promise((r) => setTimeout(r, 500));
-                    alert(JSON.stringify(values, null, 2));
-                    }}>
-                        <Form>
-                          <Field as={TextField} sx={{ my: "10px", width:'100%' }} required name="File"  variant="filled"  type="file"></Field>
-                          <Field as={TextField} sx={{ my: "10px", width:'100%' }} required label="Username" name='username' variant="filled"  type="text"></Field>
-                          <Field as={TextField} sx={{ my: "10px", width:'100%' }} required label="Email" name='Email' variant="filled"  type="email"></Field>
-                          <Field as={TextField} sx={{ my: "10px", width:'100%' }} required label="PassWord" variant="filled"  name='password' type="password"></Field>
-                          <Field as={TextField} sx={{ my: "10px", width:'100%' }} required label="Contact" variant="filled"  name='number' type="number"></Field>
-                          <Box sx={{width:"100%",display:'flex', justifyContent:'center'}}>
-                          <Button sx={{ my: "10px", background: "#dd1a18" }} variant="contained" type="submit">Submit</Button>
-                          </Box>
-                        </Form>
-                    </Formik>
-                </Box>
+      <Container>
+        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", position: "relative", top: "100px", }}>
+          <Box sx={{ borderRadius: '10px', boxShadow: '9px 9px 15px -4px #3b3b3b', px: "20px", mb: '30px' }}>
+            <Box sx={{ display: "flex", justifyContent: "center", fontSize: { lg: 45, md: 40, sm: 35, xs: 30 }, textTransform: "uppercase", color: "#3b3b3b", fontFamily: '"Prosto One", system-ui', margin: { lg: "36px 0px 36px 0px", md: "10px", sm: "auto" }, }}>
+              Sign in
             </Box>
-      
-          <Box sx={{ width: "100%", display: "flex", mt:'0px', mb:'20px' }}>
-            <Box sx={{width: "50%",color: "#000",display: "flex",justifyContent: "center",}}><Button sx={{p: "0px",fontFamily: '"Prosto one",system-ui',fontSize: "18px",color: "#000",textTransform: "none"}} onClick={handleRedirectSignup}>Login</Button></Box>
-            <Box sx={{width: "50%",textAlign: "center",fontFamily: '"Prosto one",system-ui',fontSize: "18px", lineHeight:"31px"}}>Sign Up with Goggle <img src={Icon} alt="" /></Box>
+            <Box sx={{ mb: "40px", width: "270px", display: "flex", flexWrap: "wrap", justifyContent: "center", }}>
+              <Formik initialValues={{ file: "", text: "", email: "", password: "", number: "" }}
+                onSubmit={async (values, { resetForm }) => {
+                  await new Promise((r) => setTimeout(r, 500));
+                  console.log(values)
+                  resetForm()
+                }}>
+                <Form>
+                  <Field as={TextField} sx={{ my: "10px", width: '100%' }} required name="File" variant="filled" type="file"></Field>
+                  <Field as={TextField} sx={{ my: "10px", width: '100%' }} required label="Username" name='username' variant="filled" type="text"></Field>
+                  <Field as={TextField} sx={{ my: "10px", width: '100%' }} required label="Email" name='Email' variant="filled" type="email"></Field>
+                  <Field as={TextField} sx={{ my: "10px", width: '100%' }} required label="PassWord" variant="filled" name='password' type="password"></Field>
+                  <Field as={TextField} sx={{ my: "10px", width: '100%' }} required label="Contact" variant="filled" name='number' type="number"></Field>
+                  <Box sx={{ width: "100%", display: 'flex', justifyContent: 'center' }}>
+                    <Button sx={{ my: "10px", background: "#dd1a18" }} variant="contained" type="submit">Submit</Button>
+                  </Box>
+                </Form>
+              </Formik>
+            </Box>
+          </Box>
+
+          <Box sx={{ width: "100%", display: "flex", mt: '0px', mb: '20px' }}>
+            <Box sx={{ width: "50%", color: "#000", display: "flex", justifyContent: "center", }}><Button sx={{ p: "0px", fontFamily: '"Prosto one",system-ui', fontSize: "18px", color: "#000", textTransform: "none" }} onClick={handleRedirectSignup}>Login</Button></Box>
+            <Box sx={{ width: "50%", textAlign: "center", fontFamily: '"Prosto one",system-ui', fontSize: "18px", lineHeight: "31px" }}>Sign Up with Goggle <img src={Icon} alt="" /></Box>
           </Box>
         </Box>
-    </Container>
-  </Box>
+      </Container>
+    </Box>
     // <Box>
     //     <Container>
     //         <Box sx={{display:'flex', alignItems:'center', justifyContent:'center', border:'1px solid black', borderRadius:'10px',  position: 'relative', top:'100px'}}>
@@ -66,7 +67,7 @@ const Signup = () => {
     //             </Box>
     //         {/* </  Box> */}
     //     </Container>
-               
+
     // </Box>
   )
 }
