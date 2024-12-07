@@ -20,7 +20,7 @@ const Signup = () => {
               Sign in
             </Box>
             <Box sx={{ mb: "40px", width: "270px", display: "flex", flexWrap: "wrap", justifyContent: "center", }}>
-              <Formik initialValues={{ file: "", text: "", email: "", password: "", number: "" }}
+              <Formik initialValues={{ File: "", username: "", Email: "", password: "", number: "" }}
                 onSubmit={async (values, { resetForm }) => {
                   await new Promise((r) => setTimeout(r, 500));
                   console.log(values)
