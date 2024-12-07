@@ -19,9 +19,11 @@ const Login = () => {
             Sign in
             </Box>
             <Box sx={{mb: "40px",width: "270px",display: "flex",flexWrap: "wrap",justifyContent: "center",}}>
-                <Formik initialValues={{   firstName: "",   lastName: "",   email: "",}}
-                onSubmit={ (values) => {
-                  
+                <Formik initialValues={{   username: "",   Email: "",   password: "",}}
+                onSubmit={ async(values, { resetForm }) => {
+                  await new Promise((r) => setTimeout(r, 500));
+                  console.log(values)
+                  resetForm()
                 }}
                 >
                     <Form>
